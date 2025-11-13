@@ -107,12 +107,15 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="mailTo:info@ladoxengineering.com" className="text-white">
+                  <Link
+                    href="mailTo:info@ladoxengineering.com"
+                    className="text-white"
+                  >
                     info@ladoxeng.com
                   </Link>
                 </li>
                 <li>
-                  8 Nkoro Close, Off Psychiatric Road Rumuigbo, Port Harcourt.
+                  13 Amore Street, Off Toyin Street, Ikeja, Lagos, Nigeria
                 </li>
               </ul>
             </div>
