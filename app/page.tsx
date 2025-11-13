@@ -2,6 +2,7 @@ import HomeAbout from "@/components/pages/home/About";
 import HeroSection from "@/components/pages/home/Homepage";
 import Industries from "@/components/pages/home/Industries";
 import HomeServices from "@/components/pages/home/Services";
+import LogoMarquee from "@/components/LogoMarquee";
 import Image from "next/image";
 
 import SwiperComponent from "@/components/Swiper";
@@ -27,6 +28,7 @@ export default function Home() {
           </h1>
         </div>
         <SwiperComponent />
+        <LogoMarquee />
       </>
     </div>
   );

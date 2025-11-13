@@ -14,7 +14,9 @@ const ContactUs = () => {
   return (
     <div>
       <div className="text-center pt-24 md:pt-32 px-5">
-        <h2 className="text-3xl md:text-5xl text-accent font-bold mb-4">Contact Us</h2>
+        <h2 className="text-3xl md:text-5xl text-accent font-bold mb-4">
+          Contact Us
+        </h2>
         <p className="text-base">
           Any question or remarks? Just write us a message!
         </p>
@@ -112,11 +114,11 @@ const ContactUs = () => {
             <h4 className="text-xl font-bold mb-3">Delta</h4>
             <div className="space-y-5">
               <div>
-                <p className="font-semibold">Delta Office</p>
+                <p className="font-semibold">Adebayo Komolafe</p>
                 <ul className="text-sm opacity-90 space-y-1">
                   <li>
-                    <Link href="tel:+2347038169926" className="text-accent">
-                      +234 703 816 9926
+                    <Link href="tel:++2348096087905" className="text-accent">
+                      +234 809 608 7905
                     </Link>
                   </li>
                   <li>
@@ -124,11 +126,12 @@ const ContactUs = () => {
                       +234 802 877 4600
                     </Link>
                   </li>
+                  {/* <p className="font-semibold">Adebayo Komolafe</p>
                   <li>
                     <Link href="tel:+2348096087905" className="text-accent">
                       +234 809 608 7905
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
               <div className="flex items-start gap-2">
@@ -169,7 +172,9 @@ const ContactUs = () => {
             <li>
               <div className="flex items-center gap-3">
                 <FaLocationArrow />
-                <p className="text-sm">8 Nkoro Close, Off Psychiatric Road Rumuigbo, Port Harcourt.</p>
+                <p className="text-sm">
+                  8 Nkoro Close, Off Psychiatric Road Rumuigbo, Port Harcourt.
+                </p>
               </div>
             </li>
           </ul>
