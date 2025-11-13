@@ -108,7 +108,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link href="mailTo:info@ladoxengineering.com" className="text-white">
-                    info@ladoxengineering.com
+                    info@ladoxeng.com
                   </Link>
                 </li>
                 <li>
