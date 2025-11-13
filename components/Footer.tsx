@@ -84,7 +84,7 @@ const Footer = () => {
               <h4 className="font-bold mb-4">Resources</h4>
               <ul className="space-y-3 text-sm opacity-90">
                 <li>
-                  <Link href="#">HSE Policy</Link>
+                  <Link href="/compliance">HSE Policy</Link>
                 </li>
                 <li>
                   <Link href="#">Quality Statement</Link>
