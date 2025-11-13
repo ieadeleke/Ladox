@@ -98,9 +98,9 @@ const Footer = () => {
             <div>
               <h4 className="font-bold mb-4">Get in touch</h4>
               <ul className="space-y-3 text-sm opacity-90">
-                <li>+234 813 227 316</li>
-                <li>ladox@gmail.com</li>
-                <li>132 Dartmouth Street, Boston MA 02156, USA</li>
+                <li>09067255023, 08023128318</li>
+                <li>ladox_eng2002@yahoo.com</li>
+                <li>8 Nkoro Close, Off Psychiatric Road Rumuigbo, Port Harcourt.</li>
               </ul>
             </div>
           </div>
@@ -120,4 +120,3 @@ const Footer = () => {
 };
 
 export default Footer;
-

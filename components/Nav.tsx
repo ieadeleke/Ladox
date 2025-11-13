@@ -18,8 +18,8 @@ const Navigation = () => {
           <div className="size-10 bg-[#FFFFFF2E] rounded-full items-center justify-center flex">
             <MdCall className="text-white" />
           </div>
-          <Link href="tel:+2348132277316" className="text-white text-sm">
-            Call Us: +234 813 227 7316
+          <Link href="tel:09067255023" className="text-white text-sm">
+            Call Us: 09067255023
           </Link>
         </div>
         <div className="flex items-center">

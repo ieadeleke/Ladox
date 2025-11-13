@@ -29,33 +29,25 @@ const ContactUs = () => {
           </div>
           <ul className="space-y-10 mb-20">
             <li>
-              <Link
-                href="tel:+2348132277316"
-                className="flex items-center gap-3"
-              >
+              <Link href="tel:09067255023" className="flex items-center gap-3">
                 <BiSolidPhoneCall />
-                <p className="text-sm">+234 813 227 316</p>
+                <p className="text-sm">09067255023, 08023128318</p>
               </Link>
             </li>
             <li>
               <Link
-                href="mailTo:ladox@gmail.com"
+                href="mailto:ladox_eng2002@yahoo.com"
                 className="flex items-center gap-3"
               >
                 <VscMailRead />
-                <p className="text-sm">ladox@gmail.com</p>
+                <p className="text-sm">ladox_eng2002@yahoo.com</p>
               </Link>
             </li>
             <li>
-              <Link
-                href="tel:+2348132277316"
-                className="flex items-center gap-3"
-              >
+              <div className="flex items-center gap-3">
                 <FaLocationArrow />
-                <p className="text-sm">
-                  132 Dartmouth Street Boston, Massachusetts 02156 United States
-                </p>
-              </Link>
+                <p className="text-sm">8 Nkoro Close, Off Psychiatric Road Rumuigbo, Port Harcourt.</p>
+              </div>
             </li>
           </ul>
           <div className="absolute bottom-10 left-5">
