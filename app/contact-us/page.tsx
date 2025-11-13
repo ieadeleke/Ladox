@@ -19,6 +19,129 @@ const ContactUs = () => {
           Any question or remarks? Just write us a message!
         </p>
       </div>
+
+      {/* Regional contacts */}
+      <section className="px-5 md:px-20 my-16">
+        <h3 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
+          Regional Contacts
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Lagos */}
+          <div className="bg-white border border-[#EDEDED] rounded-xl p-6">
+            <h4 className="text-xl font-bold mb-3">Lagos</h4>
+            <div className="space-y-5">
+              <div>
+                <p className="font-semibold">Mr. Gbolahan Lemboye</p>
+                <ul className="text-sm opacity-90 space-y-1">
+                  <li>
+                    <Link href="tel:+2348058322224" className="text-accent">
+                      +234 805 832 2224
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="tel:+2348096087905" className="text-accent">
+                      +234 809 608 7905
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-semibold">Mr. Oludare Adeyinka</p>
+                <ul className="text-sm opacity-90 space-y-1">
+                  <li>
+                    <Link href="tel:+2347037905103" className="text-accent">
+                      +234 703 790 5103
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="tel:+2348028774600" className="text-accent">
+                      +234 802 877 4600
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div className="flex items-start gap-2">
+                <FaLocationArrow className="mt-1" />
+                <p className="text-sm opacity-90">
+                  13 Amore Street, Off Toyin Street, Ikeja, Lagos, Nigeria
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Port Harcourt */}
+          <div className="bg-white border border-[#EDEDED] rounded-xl p-6">
+            <h4 className="text-xl font-bold mb-3">Port Harcourt</h4>
+            <div className="space-y-5">
+              <div>
+                <p className="font-semibold">J.O Adeyinka</p>
+                <ul className="text-sm opacity-90 space-y-1">
+                  <li>
+                    <Link href="tel:+2349067255023" className="text-accent">
+                      +234 906 725 5023
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="tel:+2348023128313" className="text-accent">
+                      +234 802 312 8313
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-semibold">Adebayo Komolafe</p>
+                <ul className="text-sm opacity-90 space-y-1">
+                  <li>
+                    <Link href="tel:+2348023194395" className="text-accent">
+                      +234 802 319 4395
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div className="flex items-start gap-2">
+                <FaLocationArrow className="mt-1" />
+                <p className="text-sm opacity-90">
+                  8 George Nkoro Close, Rumuigbo, Port Harcourt, Nigeria
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Delta */}
+          <div className="bg-white border border-[#EDEDED] rounded-xl p-6">
+            <h4 className="text-xl font-bold mb-3">Delta</h4>
+            <div className="space-y-5">
+              <div>
+                <p className="font-semibold">Delta Office</p>
+                <ul className="text-sm opacity-90 space-y-1">
+                  <li>
+                    <Link href="tel:+2347038169926" className="text-accent">
+                      +234 703 816 9926
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="tel:+2348028774600" className="text-accent">
+                      +234 802 877 4600
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="tel:+2348096087905" className="text-accent">
+                      +234 809 608 7905
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div className="flex items-start gap-2">
+                <FaLocationArrow className="mt-1" />
+                <p className="text-sm opacity-90">
+                  2 Adjomo Avenue, Delta Palace, Off Airport Road, Ugborikoko,
+                  Warri, Delta, Nigeria
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-14 bg-white shadow max-w-[1000px] mx-auto p-5 md:p-6 rounded-lg">
         <div className="contact-frame text-white py-10 px-5 rounded-lg relative">
           <div className="mb-16">
