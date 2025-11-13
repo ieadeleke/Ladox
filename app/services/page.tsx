@@ -3,12 +3,12 @@ const ServicesPage = () => {
     <section>
       <header>
         <>
-          <div className="px-5 md:px-20 pt-20 mb-20">
-            <h1 className="text-5xl leading-[1.3] mb-3 w-[80%]">
+          <div className="px-5 md:px-20 pt-16 md:pt-20 mb-12 md:mb-20">
+            <h1 className="text-3xl md:text-5xl leading-[1.3] mb-3 w-full md:w-[80%]">
               Our Comprehensive{" "}
               <span className="font-bold"> Digital Solutions</span>{" "}
             </h1>
-            <p className="text-base leading-loose md:leading-loose w-[50%]">
+            <p className="text-base leading-loose md:leading-loose w-full md:w-[50%]">
               We operate a decentralized organizational structure in order to
               harness individual skills and expertise with the aim of executing
               any project professionally, on time, within budget and in
@@ -17,9 +17,9 @@ const ServicesPage = () => {
           </div>
         </>
       </header>
-      <section className="cover-bg px-5 md:px-20 py-20">
-        <div className="grid grid-cols-3 gap-20">
-          <div className="col-span-2 grid grid-cols-2 gap-14">
+      <section className="cover-bg px-5 md:px-20 py-16 md:py-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-20">
+          <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-14">
             <div>
               <h4 className="text-white text-xl mb-3">Mechanical</h4>
               <ul className="space-y-3 list-disc">

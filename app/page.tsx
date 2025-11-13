@@ -16,13 +16,13 @@ export default function Home() {
       <HomeServices />
       <Industries />
       <>
-        <div className="px-5 md:px-20 pt-20">
+        <div className="px-5 md:px-20 pt-16 md:pt-20">
           <div className="flex items-start text-accent text-xs font-campton-book mb-3 gap-1">
             <h5 className="uppercase font- text-accent font-campton">
               // Projects
             </h5>
           </div>
-          <h1 className="text-5xl leading-[1.3] mb-5 w-[60%]">
+          <h1 className="text-3xl md:text-5xl leading-[1.3] mb-5 w-full md:w-[60%]">
             From Blueprint to Breakthrough: Our Proven EPC Solutions
           </h1>
         </div>

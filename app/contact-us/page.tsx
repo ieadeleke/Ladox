@@ -13,13 +13,13 @@ import { RiLinkedinFill } from "react-icons/ri";
 const ContactUs = () => {
   return (
     <div>
-      <div className="text-center pt-32">
-        <h2 className="text-5xl text-accent font-bold mb-4">Contact Us</h2>
+      <div className="text-center pt-24 md:pt-32 px-5">
+        <h2 className="text-3xl md:text-5xl text-accent font-bold mb-4">Contact Us</h2>
         <p className="text-base">
           Any question or remarks? Just write us a message!
         </p>
       </div>
-      <div className="mt-10 grid grid-cols-2 gap-14 bg-white shadow max-w-[1000px] mx-auto p-5 rounded-lg">
+      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-14 bg-white shadow max-w-[1000px] mx-auto p-5 md:p-6 rounded-lg">
         <div className="contact-frame text-white py-10 px-5 rounded-lg relative">
           <div className="mb-16">
             <h2 className="text-3xl mb-2">Contact Information</h2>
@@ -89,7 +89,7 @@ const ContactUs = () => {
         </div>
         <div className="">
           <form action="" className="py-10">
-            <div className="grid grid-cols-2 gap-10 mb-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 mb-10">
               <div className="form-group">
                 <label htmlFor="" className="text-sm">
                   First Name

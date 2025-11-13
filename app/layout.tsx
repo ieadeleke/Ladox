@@ -1,16 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import DisplayLayout from "@/components/DisplayLayout";
 
-const geistSans = Geist({
+const geistSans = localFont({
   variable: "--font-geist-sans",
-  subsets: ["latin"],
+  src: [
+    { path: "../public/fonts/campton/CamptonBook.otf", weight: "400", style: "normal" },
+    { path: "../public/fonts/campton/CamptonBold.otf", weight: "700", style: "normal" },
+  ],
 });
 
-const geistMono = Geist_Mono({
+const geistMono = localFont({
   variable: "--font-geist-mono",
-  subsets: ["latin"],
+  src: [
+    { path: "../public/fonts/campton/CamptonMedium.otf", weight: "500", style: "normal" },
+  ],
 });
 
 export const metadata: Metadata = {

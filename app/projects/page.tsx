@@ -18,11 +18,11 @@ const ProjectsPage = () => {
             <RiHomeLine className="font-black" />
             <h5 className="uppercase font-campton">OUR PROJECTS</h5>
           </div>
-          <h1 className="text-5xl leading-[1.3] mb-3">
+          <h1 className="text-3xl md:text-5xl leading-[1.3] mb-3">
             Projects we have <span className="font-bold">Completed</span> Over
             the Years
           </h1>
-          <p className="text-sm leading-loose md:leading-loose w-[70%] max-w-[640px]">
+          <p className="text-sm leading-loose md:leading-loose w-full md:w-[70%] max-w-[640px]">
             We operate a decentralized organizational structure in order to
             harness individual skills and expertise with the aim of executing
             every project professionally, on time, within budget and in

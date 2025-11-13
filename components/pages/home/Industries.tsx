@@ -20,8 +20,8 @@ const images = [
 
 const Industries = () => {
   return (
-    <section className="px-5 md:px-20 py-20 cover-bg text-white">
-      <div className="grid grid-cols-3 gap-20">
+    <section className="px-5 md:px-20 py-16 md:py-20 cover-bg text-white">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-20">
         <div>
           <div className="mb-6">
             <h6 className="text-white opacity-70 uppercase mb-5">// Industries</h6>
@@ -30,8 +30,8 @@ const Industries = () => {
             </h3>
           </div>
         </div>
-        <div className="col-span-2">
-          <div className="grid grid-cols-2 gap-10">
+        <div className="md:col-span-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-10">
             <div>
               <div className="size-16 mb-5 bg-accent rounded-lg"></div>
               <h5 className="text-xl mb-2 font-bold">Metals</h5>
