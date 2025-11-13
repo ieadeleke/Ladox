@@ -126,6 +126,11 @@ const ContactUs = () => {
                       +234 802 877 4600
                     </Link>
                   </li>
+                  <li>
+                    <Link href="tel:+2348023194395" className="text-accent">
+                      +234 802 319 4395
+                    </Link>
+                  </li>
                   {/* <p className="font-semibold">Adebayo Komolafe</p>
                   <li>
                     <Link href="tel:+2348096087905" className="text-accent">
@@ -264,6 +269,15 @@ const ContactUs = () => {
                     className="accent-accent"
                   />
                   <span className="text-sm">Request a Quote</span>
+                </label>
+                <label className="flex items-center gap-2">
+                  <input
+                    type="radio"
+                    name="subject"
+                    value="quote"
+                    className="accent-accent"
+                  />
+                  <span className="text-sm">Career</span>
                 </label>
               </div>
             </div>

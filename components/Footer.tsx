@@ -9,10 +9,9 @@ const Footer = () => {
 
   return (
     <footer className="mt-24">
-
       {/* Main footer */}
       <div className="bg-[#001921] text-white mt-10">
-        <div className="px-5 md:px-20 py-12">
+        <div className="px-5 md:px-20 py-20">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
             <div className="col-span-1 lg:col-span-2">
               <Image
@@ -98,15 +97,31 @@ const Footer = () => {
             <div>
               <h4 className="font-bold mb-4">Get in touch</h4>
               <ul className="space-y-3 text-sm opacity-90">
-                <li>09067255023, 08023128318</li>
-                <li>ladox_eng2002@yahoo.com</li>
-                <li>8 Nkoro Close, Off Psychiatric Road Rumuigbo, Port Harcourt.</li>
+                <li>
+                  <Link href="tel:+2348096087905" className="text-white">
+                    +234 809 608 7905
+                  </Link>
+                  ,{" "}
+                  <Link href="tel:+2348028774600" className="text-white">
+                    +234 802 877 4600
+                  </Link>
+                </li>
+                <li>
+                  <Link href="mailTo:info@ladoxengineering.com" className="text-white">
+                    info@ladoxengineering.com
+                  </Link>
+                </li>
+                <li>
+                  8 Nkoro Close, Off Psychiatric Road Rumuigbo, Port Harcourt.
+                </li>
               </ul>
             </div>
           </div>
 
           <div className="border-t border-white/10 mt-10 pt-6 text-sm opacity-90 flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
-            <p>© {year} Ladox Engineering Company Limited. All rights reserved.</p>
+            <p>
+              © {year} Ladox Engineering Company Limited. All rights reserved.
+            </p>
             <div className="flex items-center gap-5">
               <Link href="#">Privacy Policy</Link>
               <span className="opacity-50">•</span>
