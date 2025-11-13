@@ -14,14 +14,15 @@ const Navigation = () => {
   return (
     <>
       <div className="bg-accent py-2 px-5 md:px-20 hidden md:flex items-center justify-between">
-        <div className="flex items-center gap-3">
+        <></>
+        {/* <div className="flex items-center gap-3">
           <div className="size-10 bg-[#FFFFFF2E] rounded-full items-center justify-center flex">
             <MdCall className="text-white" />
           </div>
           <Link href="tel:09067255023" className="text-white text-sm">
             Call Us: 09067255023
           </Link>
-        </div>
+        </div> */}
         <div className="flex items-center">
           <Link
             href="/contact-us"
