@@ -87,9 +87,10 @@ const ServicesPage = () => {
                 <li className="text-white opacity-70 leading-loose md:leading-loose">Carpentry</li>
                 <li className="text-white opacity-70 leading-loose md:leading-loose">Renovations</li>
                 <li className="text-white opacity-70 leading-loose md:leading-loose">Plumbing</li>
-                <li className="text-white opacity-70 leading-loose md:leading-loose">Electrical Services</li>
+                <li className="text-white opacity-70 leading-loose md:leading-loose">Manpower outsourcing</li>
                 <li className="text-white opacity-70 leading-loose md:leading-loose">Painting</li>
                 <li className="text-white opacity-70 leading-loose md:leading-loose">Janitorial Services</li>
+                <li className="text-white opacity-70 leading-loose md:leading-loose">Provision of catering services</li>
               </ul>
             </div>
             <div>
@@ -110,7 +111,7 @@ const ServicesPage = () => {
                   Telecoms Cell Site Maintenance
                 </li>
                 <li className="text-white opacity-70 leading-loose md:leading-loose">
-                  Installation of Batteries
+                  Supply of UPS, Batteries and Alternative Power Supply
                 </li>
               </ul>
             </div>

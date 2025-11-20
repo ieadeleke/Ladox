@@ -6,7 +6,7 @@ import { RiHomeLine } from "react-icons/ri";
 
 import HeroImg from "@/assets/projects/images/compliance2.jpg";
 import Image from "next/image";
-import CompliancePhoto from "@/assets/projects/images/ladoxHero2.jpeg";
+import CompliancePhoto from "@/assets/projects/images/home3.jpeg";
 import ImgMechanical from "@/assets/projects/images/ladoHero3.jpeg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";

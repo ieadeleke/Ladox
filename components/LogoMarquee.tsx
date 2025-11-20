@@ -5,7 +5,7 @@ import logoShell from "@/assets/companies/imgi_20_shell-logo.png";
 import logoAgip from "@/assets/companies/imgi_21_agip-logo.png";
 import logoHalliburton from "@/assets/companies/imgi_22_halliburton-logo.png";
 import logoSchlumberger from "@/assets/companies/imgi_23_schlumberger-logo.png";
-import logoEleme from "@/assets/companies/imgi_24_eleme-petrochemical-logo.png";
+// import logoEleme from "@/assets/companies/imgi_24_eleme-petrochemical-logo.png";
 import logoGlobacom from "@/assets/companies/imgi_25_globacom-logo.png";
 import logoTotal from "@/assets/companies/imgi_26_total-energies-logo.png";
 import logoNigalex from "@/assets/companies/imgi_27_nigalex-logo.png";
@@ -22,7 +22,7 @@ const logos: { src: StaticImageData; alt: string }[] = [
   { src: logoAgip, alt: "Agip" },
   { src: logoHalliburton, alt: "Halliburton" },
   { src: logoSchlumberger, alt: "Schlumberger" },
-  { src: logoEleme, alt: "Eleme Petrochemical" },
+  // { src: logoEleme, alt: "Eleme Petrochemical" },
   { src: logoGlobacom, alt: "Globacom" },
   { src: logoTotal, alt: "TotalEnergies" },
   { src: logoNigalex, alt: "Nigalex" },

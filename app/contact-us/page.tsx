@@ -38,7 +38,7 @@ const ContactUs = ({
             <h4 className="text-xl font-bold mb-3">Lagos</h4>
             <div className="space-y-5">
               <div>
-                <p className="font-semibold">Mr. Gbolahan Lemboye</p>
+                {/* <p className="font-semibold">Mr. Gbolahan Lemboye</p> */}
                 <ul className="text-sm opacity-90 space-y-1">
                   <li>
                     <Link href="tel:+2348058322224" className="text-accent">
@@ -53,7 +53,7 @@ const ContactUs = ({
                 </ul>
               </div>
               <div>
-                <p className="font-semibold">Mr. Oludare Adeyinka</p>
+                {/* <p className="font-semibold">Mr. Oludare Adeyinka</p> */}
                 <ul className="text-sm opacity-90 space-y-1">
                   <li>
                     <Link href="tel:+2347037905103" className="text-accent">
@@ -81,7 +81,7 @@ const ContactUs = ({
             <h4 className="text-xl font-bold mb-3">Port Harcourt</h4>
             <div className="space-y-5">
               <div>
-                <p className="font-semibold">J.O Adeyinka</p>
+                {/* <p className="font-semibold">J.O Adeyinka</p> */}
                 <ul className="text-sm opacity-90 space-y-1">
                   <li>
                     <Link href="tel:+2349067255023" className="text-accent">
@@ -96,7 +96,7 @@ const ContactUs = ({
                 </ul>
               </div>
               <div>
-                <p className="font-semibold">Adebayo Komolafe</p>
+                {/* <p className="font-semibold">Adebayo Komolafe</p> */}
                 <ul className="text-sm opacity-90 space-y-1">
                   <li>
                     <Link href="tel:+2348023194395" className="text-accent">
@@ -119,7 +119,7 @@ const ContactUs = ({
             <h4 className="text-xl font-bold mb-3">Delta</h4>
             <div className="space-y-5">
               <div>
-                <p className="font-semibold">Adebayo Komolafe</p>
+                {/* <p className="font-semibold">Adebayo Komolafe</p> */}
                 <ul className="text-sm opacity-90 space-y-1">
                   <li>
                     <Link href="tel:++2348096087905" className="text-accent">
