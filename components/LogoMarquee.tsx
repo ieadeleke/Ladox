@@ -16,6 +16,7 @@ import logoAllianz from "@/assets/companies/imgi_33_allianz-nigeria-logo.png";
 import logoSterlingOil from "@/assets/companies/imgi_34_sterling-oil.png";
 import logoIom from "@/assets/companies/imgi_36_iom.png";
 import logoCFAO from "@/assets/companies/cfao-laborex.png";
+import Renaissance from "@/assets/companies/renaissance.jpeg";
 
 const logos: { src: StaticImageData; alt: string }[] = [
   { src: logoShell, alt: "Shell" },
@@ -33,6 +34,7 @@ const logos: { src: StaticImageData; alt: string }[] = [
   { src: logoSterlingOil, alt: "Sterling Oil" },
   { src: logoIom, alt: "IOM" },
   { src: logoCFAO, alt: "CFAO Laborex" },
+  { src: Renaissance, alt: "Renaissance" },
 ];
 
 type RowProps = { tone?: "light" | "dark"; compact?: boolean; shrinkAt?: number[] };
