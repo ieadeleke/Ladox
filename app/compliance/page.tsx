@@ -26,7 +26,7 @@ import iso450012018 from "@/assets/projects/certificates/iso-45001-2018.jpeg";
 import iso140012015 from "@/assets/projects/certificates/ISO-14001-2015.png";
 import dpr from "@/assets/projects/certificates/dpr.jpg";
 import ncc from "@/assets/projects/certificates/ncc.jpeg";
-import neca from "@/assets/projects/certificates/neca.jpg";
+import neca from "@/assets/projects/certificates/ncdmb.jpg";
 import apiQ2 from "@/assets/projects/certificates/API-Q2.jpg";
 import coren from "@/assets/projects/certificates/coren.png";
 

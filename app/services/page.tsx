@@ -20,7 +20,7 @@ const companies = [
   { src: logoAgip, alt: "Agip" },
   { src: logoHalliburton, alt: "Halliburton" },
   { src: logoSchlumberger, alt: "Schlumberger" },
-  { src: logoEleme, alt: "Eleme Petrochemical" },
+  // { src: logoEleme, alt: "Eleme Petrochemical" },
   { src: logoGlobacom, alt: "Globacom" },
   { src: logoTotal, alt: "TotalEnergies" },
   { src: logoNigalex, alt: "Nigalex" },
