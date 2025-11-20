@@ -1,9 +1,9 @@
 "use client";
 
-import ImgMechanical from "@/assets/projects/images/mechanical.jpeg";
+import ImgMechanical from "@/assets/projects/carousel/mech2.jpeg";
 import ImgOilGas from "@/assets/projects/images/oil.jpeg";
 import ImgFacility from "@/assets/projects/images/facilityMain.jpeg";
-import ImgElectrical from "@/assets/projects/images/electrical.jpeg";
+import ImgElectrical from "@/assets/projects/carousel/elect4.jpeg";
 import { IoCheckmarkCircle } from "react-icons/io5";
 import Image, { type StaticImageData } from "next/image";
 import { useState } from "react";
