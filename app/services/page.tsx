@@ -128,7 +128,7 @@ const ServicesPage = () => {
           {companies.map((c, idx) => {
             const sizeCls =
               idx === 4
-                ? "h-16 md:h-40" // 5th logo a bit larger
+                ? "h-16 md:h-32" // 5th logo a bit larger
                 : idx === 6
                 ? "h-10 md:h-8" // 7th logo a bit smaller
                 : idx === 5
