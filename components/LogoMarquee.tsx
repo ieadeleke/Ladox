@@ -12,7 +12,7 @@ import logoNigalex from "@/assets/companies/imgi_27_nigalex-logo.png";
 import logoReynolds from "@/assets/companies/imgi_28_reynolds-construction-logo.png";
 import logoUac from "@/assets/companies/imgi_29_uac-foods-logo.png";
 import logoNestle from "@/assets/companies/imgi_30_nestle-logo.png";
-import logoAllianz from "@/assets/companies/imgi_33_allianz-nigeria-logo.png";
+import logoAllianz from "@/assets/companies/allianz.jpeg";
 import logoSterlingOil from "@/assets/companies/imgi_34_sterling-oil.png";
 import logoIom from "@/assets/companies/imgi_36_iom.png";
 import logoCFAO from "@/assets/companies/cfao-laborex.png";

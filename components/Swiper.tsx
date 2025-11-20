@@ -66,7 +66,7 @@ const SwiperComponent = () => {
               alt={img.alt}
               width={1000}
               height={1000}
-              className="object-cover object-center w-full h-80"
+              className="object-cover object-top w-full h-80"
               priority={idx < 5}
             />
         </SwiperSlide>
