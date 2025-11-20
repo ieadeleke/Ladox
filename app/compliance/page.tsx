@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import type { StaticImageData } from "next/image";
 import { IoIosCheckmark } from "react-icons/io";
 import { useCallback, useEffect, useState } from "react";
 import { HiOutlineX, HiBadgeCheck } from "react-icons/hi";
@@ -18,6 +19,17 @@ import type { IconType } from "react-icons";
 import CompliancePhoto from "@/assets/projects/images/compliance.jpg";
 import CompliancePhoto2 from "@/assets/projects/images/compliance3.jpeg";
 
+// Certificate images
+import iso90012015 from "@/assets/projects/certificates/iso-9001-2015.jpeg";
+import iso90012018 from "@/assets/projects/certificates/iso-9001-2018.jpeg";
+import iso450012018 from "@/assets/projects/certificates/iso-45001-2018.jpeg";
+import iso140012015 from "@/assets/projects/certificates/ISO-14001-2015.png";
+import dpr from "@/assets/projects/certificates/dpr.jpg";
+import ncc from "@/assets/projects/certificates/ncc.jpeg";
+import neca from "@/assets/projects/certificates/neca.jpg";
+import apiQ2 from "@/assets/projects/certificates/API-Q2.jpg";
+import coren from "@/assets/projects/certificates/coren.png";
+
 const CompliancePage = () => {
   const chips = [
     "Quality Specification",
@@ -29,47 +41,56 @@ const CompliancePage = () => {
   ];
 
   // Certificates gallery
-  const certificates: { title: string; subtitle: string; Icon: IconType }[] = [
+  type Cert = { title: string; subtitle: string; Icon: IconType; image?: StaticImageData | null };
+  const certificates: Cert[] = [
     {
       title: "ISO 9001:2015",
       subtitle: "Quality Management System Certification",
       Icon: FaCertificate,
+      image: iso90012015,
     },
     {
       title: "ISO 45001:2018",
       subtitle: "Occupational Health & Safety Management System",
       Icon: MdHealthAndSafety,
+      image: iso450012018,
     },
     {
       title: "ISO 14001:2015",
       subtitle: "Environmental Management System Certification",
       Icon: FaLeaf,
+      image: iso140012015,
     },
     {
       title: "API Specification Q1/Q2",
       subtitle: "American Petroleum Institute Quality Certification",
       Icon: FaCogs,
+      image: apiQ2,
     },
     {
       title: "COREN Registration",
       subtitle: "Council for the Regulation of Engineering in Nigeria",
       Icon: HiBadgeCheck,
+      image: coren,
     },
     {
       title: "NCEC/NECA Membership",
       subtitle:
         "Nigerian Content Equipment Certificate & Contractors Association",
       Icon: FaHandshake,
+      image: neca,
     },
     {
       title: "DPR Permit",
       subtitle: "Department of Petroleum Resources Operational Permit",
       Icon: FaShieldAlt,
+      image: dpr,
     },
     {
       title: "NCC Registration",
       subtitle: "Nigerian Communications Commission Vendor Registration",
       Icon: FaBroadcastTower,
+      image: ncc,
     },
   ];
 
@@ -341,12 +362,27 @@ const CompliancePage = () => {
               onClick={() => openCert(i)}
               className="text-left rounded-xl overflow-hidden border border-[#EDEDED] bg-white shadow-sm hover:shadow-md transition focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
             >
-              <div className="p-6 flex items-center justify-center bg-[#F8F8F8]">
-                <div className="size-14 rounded-full bg-[#DFF7FF] text-accent flex items-center justify-center">
-                  <c.Icon className="text-2xl" />
-                </div>
+              {/* Preview image area */}
+              <div className="relative h-40 bg-[#F8F8F8]">
+                {c.image ? (
+                  <Image
+                    src={c.image}
+                    alt={`${c.title} certificate`}
+                    fill
+                    className="object-contain p-4"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                ) : (
+                  <img src="" alt="" className="w-full h-full object-contain p-4" />
+                )}
               </div>
               <div className="px-4 py-3">
+                <div className="mb-2 flex items-center gap-2 text-accent">
+                  <div className="size-8 rounded-full bg-[#DFF7FF] flex items-center justify-center">
+                    <c.Icon className="text-base" />
+                  </div>
+                  <span className="text-[10px] uppercase tracking-wide">Certificate</span>
+                </div>
                 <p className="text-sm font-bold">{c.title}</p>
                 <p className="text-xs opacity-70 mt-1">{c.subtitle}</p>
               </div>
@@ -384,6 +420,20 @@ const CompliancePage = () => {
                 <p className="text-sm opacity-80">
                   {certificates[certIndex].subtitle}
                 </p>
+                {/* Large preview */}
+                <div className="mt-6 relative w-full aspect-[4/3] bg-[#F8F8F8] rounded-lg overflow-hidden">
+                  {certificates[certIndex].image ? (
+                    <Image
+                      src={certificates[certIndex].image as StaticImageData}
+                      alt={`${certificates[certIndex].title} certificate`}
+                      fill
+                      className="object-contain p-4"
+                      sizes="(max-width: 768px) 92vw, 640px"
+                    />
+                  ) : (
+                    <img src="" alt="" className="w-full h-full object-contain p-4" />
+                  )}
+                </div>
                 <div className="mt-6 flex items-center justify-center gap-3">
                   <button
                     onClick={prevCert}
