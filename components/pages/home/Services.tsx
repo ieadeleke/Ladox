@@ -1,7 +1,7 @@
 "use client";
 
 import ImgMechanical from "@/assets/projects/carousel/mech2.jpeg";
-import ImgOilGas from "@/assets/projects/images/oil.jpeg";
+import ImgOilGas from "@/assets/projects/carousel/oil.jpeg";
 import ImgFacility from "@/assets/projects/images/facilityMain.jpeg";
 import ImgElectrical from "@/assets/projects/carousel/elect4.jpeg";
 import { IoCheckmarkCircle } from "react-icons/io5";
@@ -64,6 +64,8 @@ const CONTENT: Record<
       "Distribution of generators — sales, leasing and maintenance",
       "Supply of electrical materials and OEM spares",
       "Electrical equipment installation, cell‑site maintenance and batteries",
+      "Telecoms Cell Site Maintenance",
+      "Supply of UPS, Batteries and Alternative Power Supply",
     ],
     image: ImgElectrical,
   },
