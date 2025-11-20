@@ -129,8 +129,8 @@ const ServicesPage = () => {
             const sizeCls =
               idx === 4
                 ? "h-16 md:h-40" // 5th logo a bit larger
-                : idx === 7
-                ? "h-10 md:h-8" // 8th logo a bit smaller
+                : idx === 6
+                ? "h-10 md:h-8" // 7th logo a bit smaller
                 : idx === 5
                 ? "h-10 md:h-20" // 5th logo a bit bigger
                 : idx === 13
