@@ -90,7 +90,7 @@ const ServicesPage = () => {
                 <li className="text-white opacity-70 leading-loose md:leading-loose">Manpower outsourcing</li>
                 <li className="text-white opacity-70 leading-loose md:leading-loose">Painting</li>
                 <li className="text-white opacity-70 leading-loose md:leading-loose">Janitorial Services</li>
-                <li className="text-white opacity-70 leading-loose md:leading-loose">Provision of catering services</li>
+                <li className="text-white opacity-70 leading-loose md:leading-loose">Provision of catering services and kitchen equitments</li>
               </ul>
             </div>
             <div>
