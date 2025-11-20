@@ -29,9 +29,12 @@ const SwiperComponent = () => {
     <Swiper
       modules={[Autoplay, Navigation, Pagination]}
       slidesPerView={4.5}
-      spaceBetween={5}
+      spaceBetween={12}
       loop
-      autoplay={{ delay: 2500, disableOnInteraction: false }}
+      loopAdditionalSlides={images.length}
+      speed={12000}
+      autoplay={{ delay: 0, disableOnInteraction: false, pauseOnMouseEnter: false }}
+      allowTouchMove={false}
       navigation
       className=""
     >

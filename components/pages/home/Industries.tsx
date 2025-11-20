@@ -1,22 +1,7 @@
 "use client";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import Image from "next/image";
-
-const images = [
-  { src: "/next.svg", alt: "Next.js" },
-  { src: "/vercel.svg", alt: "Vercel" },
-  { src: "/globe.svg", alt: "Globe" },
-  { src: "/window.svg", alt: "Window" },
-  { src: "/file.svg", alt: "File" },
-  // Duplicate to create a longer carousel experience
-  { src: "/next.svg", alt: "Next.js" },
-  { src: "/vercel.svg", alt: "Vercel" },
-  { src: "/globe.svg", alt: "Globe" },
-  { src: "/window.svg", alt: "Window" },
-  { src: "/file.svg", alt: "File" },
-];
+import { GiOilDrum, GiFactory, GiRadioTower, GiGreekTemple } from "react-icons/gi";
+import LogoMarquee from "@/components/LogoMarquee";
 
 const Industries = () => {
   return (
@@ -33,43 +18,52 @@ const Industries = () => {
         <div className="md:col-span-2">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-10">
             <div>
-              <div className="size-16 mb-5 bg-accent rounded-lg"></div>
-              <h5 className="text-xl mb-2 font-bold">Metals</h5>
+              <div className="size-16 mb-5 bg-accent rounded-lg flex items-center justify-center">
+                <GiOilDrum className="text-white text-2xl" />
+              </div>
+              <h5 className="text-xl mb-2 font-bold">Oil & Gas</h5>
               <p className="text-sm opacity-80 leading-loose">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum,
-                officia accusantium. Harum voluptas, tempore in doloremque neque
-                aspernatur ratione eaque itaque.
+                EPC delivery for upstream and downstream operations — HVAC, electrical,
+                equipment supply, and site maintenance for leading operators.
               </p>
             </div>
             <div>
-              <div className="size-16 mb-5 bg-accent rounded-lg"></div>
-              <h5 className="text-xl mb-2 font-bold">Metals</h5>
+              <div className="size-16 mb-5 bg-accent rounded-lg flex items-center justify-center">
+                <GiFactory className="text-white text-2xl" />
+              </div>
+              <h5 className="text-xl mb-2 font-bold">Manufacturing & FMCG</h5>
               <p className="text-sm opacity-80 leading-loose">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum,
-                officia accusantium. Harum voluptas, tempore in doloremque neque
-                aspernatur ratione eaque itaque.
+                Industrial refrigeration, power distribution, and facility management for
+                high‑availability production environments.
               </p>
             </div>
             <div>
-              <div className="size-16 mb-5 bg-accent rounded-lg"></div>
-              <h5 className="text-xl mb-2 font-bold">Metals</h5>
+              <div className="size-16 mb-5 bg-accent rounded-lg flex items-center justify-center">
+                <GiRadioTower className="text-white text-2xl" />
+              </div>
+              <h5 className="text-xl mb-2 font-bold">Telecoms & Power</h5>
               <p className="text-sm opacity-80 leading-loose">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum,
-                officia accusantium. Harum voluptas, tempore in doloremque neque
-                aspernatur ratione eaque itaque.
+                Cell‑site maintenance, battery installations, and generator supply, leasing,
+                and maintenance for robust network uptime.
               </p>
             </div>
             <div>
-              <div className="size-16 mb-5 bg-accent rounded-lg"></div>
-              <h5 className="text-xl mb-2 font-bold">Metals</h5>
+              <div className="size-16 mb-5 bg-accent rounded-lg flex items-center justify-center">
+                <GiGreekTemple className="text-white text-2xl" />
+              </div>
+              <h5 className="text-xl mb-2 font-bold">Public Sector & Infrastructure</h5>
               <p className="text-sm opacity-80 leading-loose">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum,
-                officia accusantium. Harum voluptas, tempore in doloremque neque
-                aspernatur ratione eaque itaque.
+                Turnkey projects executed to international standards — safe, efficient,
+                and compliant with regulatory requirements.
               </p>
             </div>
           </div>
         </div>
+      </div>
+      {/* Rolling client logos within Industries */}
+      <div className="mt-10">
+        <p className="text-xs uppercase tracking-wide text-white/70 mb-3">Trusted by leading brands</p>
+        <LogoMarquee tone="dark" compact flush fullBleed noBorder />
       </div>
     </section>
   );

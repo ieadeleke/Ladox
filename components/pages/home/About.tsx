@@ -1,17 +1,17 @@
 import Image from "next/image";
-import ImgWorkers from "@/assets/_1.jpg";
-import ImgPlant from "@/assets/services.svg";
+import ACUnit from "@/assets/_5.svg";
+import ImgPlant from "@/assets/_4.svg";
 
 const HomeAbout = () => {
   return (
     <section className="bg-primary px-5 md:px-20 py-16 md:py-20 text-white">
-      <p className="text-xs md:text-sm mb-3 opacity-80 uppercase">// About</p>
+      <p className="text-xs md:text-sm mb-3 opacity-80 uppercase mb-5">Who We Are</p>
       <h3 className="text-3xl md:text-4xl leading-[1.3]">
-        We are a global leader in Engineering, Procurement, and
-        Construction(EPC) services,
+        Engineering excellence with Nigerian roots since 1991. We bring disciplined project controls, proven
         <span className="block md:inline font-campton-bold text-[#A8B7CD]">
-          {" "}committed to delivering innovative and sustainable solutions
-          across multiple industries.
+          {" "}
+          HSE practices and a relentless focus on quality — delivering safely,
+          on time and on budget.
         </span>
       </h3>
 
@@ -20,9 +20,9 @@ const HomeAbout = () => {
         <div className="md:col-span-4 bg-white rounded-2xl overflow-hidden shadow-md text-foreground flex flex-col">
           <div className="w-full min-h-0 p-2">
             <Image
-              src={ImgWorkers}
-              alt="Completion Rate"
-              className="w-full h-full max-h-[300px] rounded-lg object-cover"
+              src={ACUnit}
+              alt="air conditioning unit"
+              className="w-full h-full max-h-[300px] rounded-lg object-cover object-top"
               width={1000}
               height={1000}
               quality={100}
@@ -36,7 +36,7 @@ const HomeAbout = () => {
               95%
             </h4>
             <p className="text-sm opacity-70 leading-relaxed">
-              On-time Project Delivery across various global markets.
+              On‑time delivery across Nigeria’s energy and industrial sectors, backed by rigorous planning and QA/QC.
             </p>
           </div>
         </div>
@@ -47,14 +47,14 @@ const HomeAbout = () => {
             <p className="text-base text-foreground/70">Client Satisfaction</p>
             <h4 className="text-4xl md:text-5xl font-bold">95%</h4>
             <p className="text-sm leading-relaxed opacity-60">
-              Driven by our commitment to quality and execution.
+              QA/QC discipline, strong HSE culture, clear communication.
             </p>
           </div>
           <div className="bg-accent rounded-xl p-5 shadow-md text-white flex-1 flex flex-col justify-between">
             <p className="text-base opacity-90">Cost Efficiency</p>
             <h4 className="text-4xl md:text-5xl font-bold mb-1">20%</h4>
             <p className="text-sm leading-relaxed opacity-90 max-w-[220px]">
-              Cost savings for clients through optimized engineering services.
+              Savings via optimized engineering, preventive upkeep and OEM sourcing.
             </p>
           </div>
         </div>

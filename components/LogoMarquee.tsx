@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from "next/image";
+import clsx from "clsx";
 
 import logoShell from "@/assets/companies/imgi_20_shell-logo.png";
 import logoAgip from "@/assets/companies/imgi_21_agip-logo.png";
@@ -34,35 +35,77 @@ const logos: { src: StaticImageData; alt: string }[] = [
   { src: logoCFAO, alt: "CFAO Laborex" },
 ];
 
-function Row() {
+type RowProps = { tone?: "light" | "dark"; compact?: boolean; shrinkAt?: number[] };
+
+function Row({ tone = "light", compact = false, shrinkAt = [] }: RowProps) {
+  const itemWidth = compact ? "w-28 md:w-32" : "w-32 md:w-40"; // unify width per logo
+  const itemCls = clsx(
+    "shrink-0 transition px-0 flex items-center justify-center",
+    itemWidth,
+    tone === "dark" ? "opacity-90 hover:opacity-100" : "opacity-70 hover:opacity-100"
+  );
+  const shrinkSet = new Set((shrinkAt || []).map((i) => i - 1)); // accept 1-based indexes
   return (
-    <div className="flex items-center gap-10 md:gap-16">
-      {logos.map((logo) => (
-        <div
-          key={logo.alt}
-          className="shrink-0 opacity-70 hover:opacity-100 transition px-4 md:px-6"
-        >
-          <Image
-            src={logo.src}
-            alt={logo.alt}
-            className="h-8 md:h-10 w-auto object-contain grayscale hover:grayscale-0"
-            height={40}
-            width={160}
-            quality={100}
-          />
-        </div>
-      ))}
+    <div className={clsx("flex items-center", compact ? "gap-4 md:gap-6" : "gap-6 md:gap-8") }>
+      {logos.map((logo, idx) => {
+        const isShrunk = shrinkSet.has(idx);
+        const imgCls = clsx(
+          "w-full h-auto object-contain transition",
+          compact
+            ? isShrunk
+              ? "max-h-6 md:max-h-7"
+              : "max-h-8 md:max-h-9"
+            : isShrunk
+            ? "max-h-6 md:max-h-7"
+            : "max-h-8 md:max-h-10",
+          "grayscale hover:grayscale-0"
+        );
+        return (
+          <div key={logo.alt} className={itemCls}>
+            <Image src={logo.src} alt={logo.alt} className={imgCls} height={40} width={160} quality={100} />
+          </div>
+        );
+      })}
     </div>
   );
 }
 
-const LogoMarquee = () => {
+type LogoMarqueeProps = {
+  tone?: "light" | "dark";
+  className?: string;
+  compact?: boolean;
+  noBorder?: boolean;
+  flush?: boolean; // remove internal paddings and chrome
+  fullBleed?: boolean; // stretch to viewport width within padded parents
+  shrinkAt?: number[]; // 1-based indices to render slightly smaller
+};
+
+const LogoMarquee = ({
+  tone = "light",
+  className,
+  compact = false,
+  noBorder = false,
+  flush = false,
+  fullBleed = false,
+  shrinkAt = [],
+}: LogoMarqueeProps) => {
+  const wrapperCls = clsx(
+    fullBleed && "-mx-5 md:-mx-20",
+    tone === "light"
+      ? clsx(flush ? "px-0 py-0" : "px-5 md:px-20 py-10", !noBorder && "border-t border-[#EDEDED]")
+      : flush ? "px-0 py-0" : "px-5 md:px-20 pt-6 pb-2"
+  );
+  const containerCls = clsx(
+    "relative overflow-hidden",
+    tone === "dark" && (flush ? "bg-transparent" : "rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm"),
+    flush ? "px-0 py-0" : tone === "dark" ? "px-4 md:px-6 py-4" : ""
+  );
   return (
-    <section className="px-5 md:px-20 py-10 border-t border-[#EDEDED]">
-      <div className="relative overflow-hidden">
+    <section className={clsx(wrapperCls, className)}>
+      <div className={containerCls}>
         <div className="logos-track">
-          <Row />
-          <Row />
+          <Row tone={tone} compact={compact} shrinkAt={shrinkAt} />
+          <Row tone={tone} compact={compact} shrinkAt={shrinkAt} />
         </div>
       </div>
     </section>

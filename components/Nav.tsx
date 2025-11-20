@@ -31,14 +31,14 @@ const Navigation = () => {
         </div> */}
         <div className="flex items-center">
           <Link
-            href="/contact-us"
-            className="bg-[#FBBD06] h-12 flex items-center justify-center font-campton px-6 w-max rounded-full text-sm"
+            href="/contact-us?subject=quote"
+            className="bg-[#FBBD06] h-10 flex items-center justify-center font-campton px-6 w-max rounded-full text-xs"
           >
             Get a Quote
           </Link>
           <Link
-            href=""
-            className="bg-[#FBBD06] size-12 flex items-center justify-center font-bold rounded-full text-sm"
+            href="/contact-us?subject=quote"
+            className="bg-[#FBBD06] size-10 flex items-center justify-center font-bold rounded-full text-sm"
           >
             <FaArrowRight className="text-lg animated-arrow" />
           </Link>
@@ -69,8 +69,17 @@ const Navigation = () => {
           <li className={itemCls("/projects")}>
             <Link href="/projects">Projects</Link>
           </li>
-          <li className={itemCls("/compliance")}>
+          <li className={`relative group ${itemCls("/compliance")}`}>
             <Link href="/compliance">Compliance</Link>
+            {/* Dropdown */}
+            <div className="absolute left-0 top-full mt-2 hidden group-hover:block bg-white border border-[#EDEDED] rounded-lg shadow-lg min-w-60 py-2">
+              <Link
+                href="/compliance/hse-policy"
+                className="block px-4 py-2 hover:bg-[#F8F8F8]"
+              >
+                HSE Policy Statement
+              </Link>
+            </div>
           </li>
           <li className={itemCls("/contact-us")}>
             <Link
@@ -109,6 +118,9 @@ const Navigation = () => {
             </li>
             <li className={itemCls("/compliance")}>
               <Link href="/compliance" onClick={() => setOpen(false)}>Compliance</Link>
+            </li>
+            <li className={itemCls("/compliance/hse-policy-statement")}>
+              <Link href="/compliance/hse-policy-statement" onClick={() => setOpen(false)}>HSE Policy Statement</Link>
             </li>
             <li className={`pt-2 ${itemCls("/contact-us")}`}>
               <Link

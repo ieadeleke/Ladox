@@ -10,7 +10,12 @@ import { FaInstagram } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { RiLinkedinFill } from "react-icons/ri";
 
-const ContactUs = () => {
+const ContactUs = ({
+  searchParams,
+}: {
+  searchParams?: { subject?: string };
+}) => {
+  const subject = (searchParams?.subject || "").toLowerCase();
   return (
     <div>
       <div className="text-center pt-24 md:pt-32 px-5">
@@ -167,11 +172,11 @@ const ContactUs = () => {
             </li>
             <li>
               <Link
-                href="mailto:ladox_eng2002@yahoo.com"
+                href="mailto:info@ladoxeng.comom"
                 className="flex items-center gap-3"
               >
                 <VscMailRead />
-                <p className="text-sm">ladox_eng2002@yahoo.com</p>
+                <p className="text-sm">info@ladoxeng.com</p>
               </Link>
             </li>
             <li>
@@ -249,6 +254,7 @@ const ContactUs = () => {
                     name="subject"
                     value="general"
                     className="accent-accent"
+                    defaultChecked={subject === "general"}
                   />
                   <span className="text-sm">General Inquiry</span>
                 </label>
@@ -258,6 +264,7 @@ const ContactUs = () => {
                     name="subject"
                     value="support"
                     className="accent-accent"
+                    defaultChecked={subject === "support"}
                   />
                   <span className="text-sm">Support</span>
                 </label>
@@ -267,6 +274,7 @@ const ContactUs = () => {
                     name="subject"
                     value="quote"
                     className="accent-accent"
+                    defaultChecked={subject === "quote"}
                   />
                   <span className="text-sm">Request a Quote</span>
                 </label>
@@ -274,8 +282,9 @@ const ContactUs = () => {
                   <input
                     type="radio"
                     name="subject"
-                    value="quote"
+                    value="career"
                     className="accent-accent"
+                    defaultChecked={subject === "career"}
                   />
                   <span className="text-sm">Career</span>
                 </label>

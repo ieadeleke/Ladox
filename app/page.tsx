@@ -23,12 +23,12 @@ export default function Home() {
               // Projects
             </h5>
           </div>
-          <h1 className="text-3xl md:text-5xl leading-[1.3] mb-5 w-full md:w-[60%]">
+          <h1 className="text-3xl md:text-4xl leading-[1.3] mb-5 w-full md:w-[60%]">
             From Blueprint to Breakthrough: Our Proven EPC Solutions
           </h1>
         </div>
         <SwiperComponent />
-        <LogoMarquee />
+        {/* <LogoMarquee shrinkAt={[7, 8]} /> */}
       </>
     </div>
   );

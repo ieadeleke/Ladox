@@ -1,11 +1,22 @@
 "use client";
 
 import Image from "next/image";
-import About1 from "@/assets/about_1.svg";
-import About2 from "@/assets/about_2.svg";
-import ServicesImg from "@/assets/services.svg";
-import ComplianceImg from "@/assets/compliance.svg";
 import { IoIosCheckmark } from "react-icons/io";
+import { useCallback, useEffect, useState } from "react";
+import { HiOutlineX, HiBadgeCheck } from "react-icons/hi";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+import {
+  FaCertificate,
+  FaCogs,
+  FaHandshake,
+  FaShieldAlt,
+  FaLeaf,
+  FaBroadcastTower,
+} from "react-icons/fa";
+import { MdHealthAndSafety } from "react-icons/md";
+import type { IconType } from "react-icons";
+import CompliancePhoto from "@/assets/projects/images/compliance.jpg";
+import CompliancePhoto2 from "@/assets/projects/images/compliance3.jpeg";
 
 const CompliancePage = () => {
   const chips = [
@@ -16,6 +27,82 @@ const CompliancePage = () => {
     "Quality Objectives",
     "Safety Personnel",
   ];
+
+  // Certificates gallery
+  const certificates: { title: string; subtitle: string; Icon: IconType }[] = [
+    {
+      title: "ISO 9001:2015",
+      subtitle: "Quality Management System Certification",
+      Icon: FaCertificate,
+    },
+    {
+      title: "ISO 45001:2018",
+      subtitle: "Occupational Health & Safety Management System",
+      Icon: MdHealthAndSafety,
+    },
+    {
+      title: "ISO 14001:2015",
+      subtitle: "Environmental Management System Certification",
+      Icon: FaLeaf,
+    },
+    {
+      title: "API Specification Q1/Q2",
+      subtitle: "American Petroleum Institute Quality Certification",
+      Icon: FaCogs,
+    },
+    {
+      title: "COREN Registration",
+      subtitle: "Council for the Regulation of Engineering in Nigeria",
+      Icon: HiBadgeCheck,
+    },
+    {
+      title: "NCEC/NECA Membership",
+      subtitle:
+        "Nigerian Content Equipment Certificate & Contractors Association",
+      Icon: FaHandshake,
+    },
+    {
+      title: "DPR Permit",
+      subtitle: "Department of Petroleum Resources Operational Permit",
+      Icon: FaShieldAlt,
+    },
+    {
+      title: "NCC Registration",
+      subtitle: "Nigerian Communications Commission Vendor Registration",
+      Icon: FaBroadcastTower,
+    },
+  ];
+
+  const [certOpen, setCertOpen] = useState(false);
+  const [certIndex, setCertIndex] = useState<number>(0);
+  const openCert = useCallback((i: number) => {
+    setCertIndex(i);
+    setCertOpen(true);
+  }, []);
+  const closeCert = useCallback(() => setCertOpen(false), []);
+  const prevCert = useCallback(
+    () =>
+      setCertIndex((i) => (i - 1 + certificates.length) % certificates.length),
+    [certificates.length]
+  );
+  const nextCert = useCallback(
+    () => setCertIndex((i) => (i + 1) % certificates.length),
+    [certificates.length]
+  );
+  const ActiveIcon: IconType | null = certOpen
+    ? certificates[certIndex].Icon
+    : null;
+
+  useEffect(() => {
+    if (!certOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeCert();
+      if (e.key === "ArrowLeft") prevCert();
+      if (e.key === "ArrowRight") nextCert();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [certOpen, closeCert, prevCert, nextCert]);
 
   return (
     <section>
@@ -57,9 +144,25 @@ const CompliancePage = () => {
           <div className="relative w-full">
             <div className="grid grid-cols-2 gap-2">
               <div className="pt-14">
-                <div className="bg-black h-100 [25rem] w-full"></div>
+                <Image
+                  src={CompliancePhoto}
+                  alt="Compliance"
+                  className="w-full h-100 object-cover rounded-xl"
+                  width={1000}
+                  height={1000}
+                  quality={100}
+                />
               </div>
-              <div className="bg-black h-100 w-full"></div>
+              <div className="bg-black h-100 w-full rounded-xl">
+                <Image
+                  src={CompliancePhoto2}
+                  alt="Compliance"
+                  className="w-full h-100 object-cover rounded-xl"
+                  width={1000}
+                  height={1000}
+                  quality={100}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -68,39 +171,97 @@ const CompliancePage = () => {
       {/* Quality area with chips and image */}
       <section className="">
         <div className="bg-[#EAF6FE] px-5 py-20 md:px-20 mt-24">
-          <div className="max-w-[1200px] mx-auto">
-            <div className="flex flex-wrap items-center gap-3 mb-6 w-max mx-auto">
-              {chips.map((c, index) => (
-                <span
-                  key={c}
-                  className={`text-xs md:text-[13px] font-bold px-8 py-4 rounded-full ${index === 0 ?'bg-accent text-white' : 'bg-white text-black'}`}
-                >
-                  {c}
-                </span>
-              ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
+            <div>
+              <div className="cursor-pointer select-none flex items-center justify-between text-lg font-bold">
+                Product Supply Quality{" "}
+              </div>
+              <p className="mt-3 text-sm leading-loose md:leading-loose">
+                Ladox as a company carefully test her supplied product through
+                the quality control section of the organization to ensure that
+                they manufacture supply products that has no harm to the
+                environment, either on plants, animals or its surrounding of
+                operations, for example depletion of the ozone layer by HCFC
+                refrigerants.
+              </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-16">
-              <div>
-                <h3 className="text-2xl font-bold mb-3">
-                  Quality assurance in all we do
-                </h3>
-                <p className="text-sm md:text-base leading-loose md:leading-loose max-w-[560px]">
-                  Ladox as a technical company has taken it as a point of duty
-                  to do away with all products that do not comply with
-                  international and national standards such as ISO quality,
-                  IEEE, IEC, EEMC etc. We also ensure we comply with the
-                  standard of quality supply to our host companies.
-                </p>
+            <div>
+              <div className="cursor-pointer select-none flex items-center justify-between text-lg font-bold">
+                Responsibility
               </div>
-              <div className="rounded-xl overflow-hidden shadow-sm w-full">
-                <Image
-                  src={ComplianceImg}
-                  alt="Quality workstation"
-                  quality={100}
-                  width={1000}
-                  height={1000}
-                />
+              <p className="mt-3 text-sm leading-loose md:leading-loose">
+                The project Engineer has overall responsibility for the
+                successful execution of the project, including conformity with
+                CLIENT'S quality management system and meeting project
+                objectives. Site inspectors (cars) shall ensure project
+                activities are carried out according to documented procedures,
+                guidelines and instructions.
+              </p>
+            </div>
+            <div>
+              <div className="cursor-pointer select-none flex items-center justify-between text-lg font-bold">
+                Quality Specification{" "}
               </div>
+              <p className="mt-3 text-sm leading-loose md:leading-loose">
+                Ladox as a technical company has taken it as a point of concern
+                to do away with all products that does not comply with
+                international and national standards such as ISO quality, IEEE,
+                IEC, IEMC etc. she also makes sure she complies with the
+                standard of quality supply to its host companies.
+              </p>
+            </div>
+            <div>
+              <div className="cursor-pointer select-none flex items-center justify-between text-lg font-bold">
+                Supervision{" "}
+              </div>
+              <p className="mt-3 text-sm leading-loose md:leading-loose">
+                Ladox has made it a point of concern to ensure that her
+                supervision i s based on recommendation, qualification, training
+                and seasoned personnel who are always strict to, and at all
+                times ready to carry the company along by making proper
+                supervision of workers welfare, remunerations, proper
+                supervision of our client facility and equipment.
+              </p>
+            </div>
+            <div>
+              <div className="cursor-pointer select-none flex items-center justify-between text-lg font-bold">
+                Quality Objectives{" "}
+              </div>
+              <p className="mt-3 text-sm leading-loose md:leading-loose">
+                Provide products and services that are in accordance with all
+                specified CLIENT requirements and commonly accepted standards
+                and specifications within budget and on time. Meet the needs and
+                requirements of stakeholders and return on investment. Ensure
+                continuous performance improvement, through early identification
+                of quality assurance matters and feedback to the system. Timely
+                execution of projects to technical standards, operations
+                maintainability and applicable statutory regulations at the
+                lowest possible cost, and without loss to lives and assets.
+              </p>
+            </div>
+            <div>
+              <div className="cursor-pointer select-none flex items-center justify-between text-lg font-bold">
+                Safety Personnel{" "}
+              </div>
+              <p className="mt-3 text-sm leading-loose md:leading-loose">
+                As a company we believe that health is wealth and that good
+                health promotes a healthy living which is why Ladox Eng. Coy Ltd
+                has carefully trained some graduate personnel through the HSE
+                matters of the organization, so as to promote good health,
+                proper working environment, for technicians and clerical
+                personnel’s, to co-ordinate the gap between the management and
+                the contractor personnel. To ensure daily toolbox talks are
+                highlighted and monthly HSE meeting are held, to highlight all
+                the activities and performances of the company, and to seek area
+                of new industrial development and improvement. Ladox through her
+                safety officers has been able to promote community affairs,
+                security alertness to all personnel involve in the contract
+                operations, to make sure our host communities are in-cooperated
+                into our contract workforce, to eliminate potential accidents /
+                incidents, which could either result in injury of personnel or
+                damage to the equipment, environment or client equipment or
+                facility.
+              </p>
             </div>
           </div>
         </div>
@@ -157,6 +318,92 @@ const CompliancePage = () => {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Compliance Certificates */}
+      <section className="px-5 md:px-20 py-16">
+        <div className="text-center mb-8">
+          <p className="text-xs md:text-sm uppercase text-accent mb-3">
+            Compliance Certificates
+          </p>
+          <h2 className="text-2xl md:text-3xl font-bold mt-1">
+            Our Certifications
+          </h2>
+          <p className="text-sm opacity-70 mt-2">
+            Browse validated documents and compliance credentials.
+          </p>
+        </div>
+        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {certificates.map((c, i) => (
+            <button
+              key={c.title}
+              type="button"
+              onClick={() => openCert(i)}
+              className="text-left rounded-xl overflow-hidden border border-[#EDEDED] bg-white shadow-sm hover:shadow-md transition focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/60"
+            >
+              <div className="p-6 flex items-center justify-center bg-[#F8F8F8]">
+                <div className="size-14 rounded-full bg-[#DFF7FF] text-accent flex items-center justify-center">
+                  <c.Icon className="text-2xl" />
+                </div>
+              </div>
+              <div className="px-4 py-3">
+                <p className="text-sm font-bold">{c.title}</p>
+                <p className="text-xs opacity-70 mt-1">{c.subtitle}</p>
+              </div>
+            </button>
+          ))}
+        </div>
+
+        {certOpen && (
+          <div
+            className="fixed inset-0 z-[60] bg-black/70 backdrop-blur-sm flex items-center justify-center px-4"
+            onClick={closeCert}
+            role="dialog"
+            aria-modal="true"
+          >
+            <div
+              className="relative w-[min(92vw,680px)]"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                aria-label="Close"
+                onClick={closeCert}
+                className="absolute -top-10 right-0 text-white/90 hover:text-white"
+              >
+                <HiOutlineX className="text-3xl" />
+              </button>
+              <div className="bg-white rounded-2xl p-6 md:p-8 shadow-xl text-center">
+                <div className="flex items-center justify-center mb-4">
+                  <div className="size-16 rounded-full bg-[#DFF7FF] text-accent flex items-center justify-center">
+                    {ActiveIcon ? <ActiveIcon className="text-3xl" /> : null}
+                  </div>
+                </div>
+                <h3 className="text-xl md:text-2xl font-bold mb-2">
+                  {certificates[certIndex].title}
+                </h3>
+                <p className="text-sm opacity-80">
+                  {certificates[certIndex].subtitle}
+                </p>
+                <div className="mt-6 flex items-center justify-center gap-3">
+                  <button
+                    onClick={prevCert}
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#EDEDED] bg-white hover:bg-[#F8F8F8] text-sm"
+                  >
+                    <FaChevronLeft />
+                    Prev
+                  </button>
+                  <button
+                    onClick={nextCert}
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#EDEDED] bg-white hover:bg-[#F8F8F8] text-sm"
+                  >
+                    Next
+                    <FaChevronRight />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </section>
 
       {/* Bottom grid of compliance topics */}
